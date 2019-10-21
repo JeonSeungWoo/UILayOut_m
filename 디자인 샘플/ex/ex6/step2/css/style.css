@@ -1,0 +1,48 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
+
+/*  Reset CSS  */
+* { margin:0;  padding:0;}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#555; }
+img { border:0;}
+body {font-family:orbitron; } 
+
+/*전체 프레임*/
+#wrap { position:fixed; top:0px; left:0px; width:100%; height:100%; min-width:1400px; min-height:780px; background-image:url(../img/bg_morning.jpg); background-size:cover; transition:all 2s;}
+
+/*로고*/
+#wrap h1 { width:90px; height:80px; position:fixed; top:30px; left:60px; background-image:url(../img/logo_b.png); background-size:contain; background-repeat:no-repeat; }
+
+/*주메뉴*/
+#gnb { position:fixed; top:50px; right:200px;}
+#gnb li { float:left; margin-left:30px;}
+#gnb li a { font-size:14px; font-weight:bold; color:#555;}
+
+/*sns버튼*/
+#sns { position:fixed; top:50px; right:50px;}
+#sns li { float:left; margin-left:20px;}
+#sns li i { font-size:18px; color:#555;}
+
+/*텍스트 박스*/
+article { position:absolute; top:350px; left:150px; width:450px; }
+article p { font-size:50px; color:#666;}
+article p strong { color:#111;}
+article em { font-size:14px; font-style:normal; color:#333;}
+
+/*아이폰*/
+figure { position:absolute; top:200px; right:-300px; width:1226px; height:809px; background-image:url(../img/phone_morning.png); transition:all 2s;}
+figure p { position:absolute; top:100px; left:137px; width:540px; height:307px; overflow:hidden; font-size:60px; font-weight:bold; color:#333; line-height:4.6; box-sizing:border-box; padding-left:50px;}
+figure p span { position:relative; z-index:5;}
+
+/*테마버튼*/
+nav { position:fixed; bottom:70px; left:6%; width:88%; }
+nav li { float:left; width:25%;}
+nav li a { display:block; width:98%; height:35px; background:#fff; color:#111; margin:0 auto; transition:all 0.5s; font-size:12px; font-weight:bold; line-height:3; letter-spacing:3px; box-sizing:border-box; padding-left:30px; opacity:0.6; z-index:1; position:relative;}
+nav li:hover a { background:#111; color:#ddd; opacity:0.9; }
+
+
+
+
+
+

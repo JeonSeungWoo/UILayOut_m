@@ -1,0 +1,68 @@
+﻿@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
+/* reset */
+* { margin:0;  padding:0;}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#555; }
+img { border:0;}
+body { font:12px/1.6 'Poiret One'; color:#555; } 
+
+
+/*레이아웃*/
+header { position:fixed; width:15%; height:100%; background:#fff; top:0px; left:0px; }
+nav { position:relative; width:85%; height:35px; background:#212121; margin-left:15%; }
+section { width:85%; position:relative; margin-left:15%;}
+article { float:left; height:260px; }
+
+/* 각각 박스 크기지정*/
+article:nth-child(1) { width:60%; height:520px; background:#ddd;}
+article:nth-child(2) { width:40%; background:#ccc;}
+article:nth-child(3) { width:20%; background:#bbb;}
+article:nth-child(4) { width:20%; background:#aaa;}
+article:nth-child(5) { width:20%; background:#999;}
+article:nth-child(6) { width:40%; background:#888;}
+article:nth-child(7) { width:20%; background:#777;}
+article:nth-child(8) { width:20%; background:#666;}
+article:nth-child(9) { width:40%; background:#555;}
+article:nth-child(10) { width:20%;	background:#444;}
+article:nth-child(11) { width:20%; background:#333;}
+article:nth-child(12) { width:20%;	background:#222;}
+
+
+
+	
+
+@media screen and (min-width:1280px) and (max-width:1599px) {  
+
+
+
+}
+@media screen and (min-width:1024px) and (max-width:1279px) {  
+	
+
+	 
+}
+@media screen and (min-width:780px) and (max-width:1023px) {  
+
+
+
+}
+@media screen and (min-width:640px) and (max-width:779px) {  
+
+
+	
+}
+@media screen and (min-width:480px) and (max-width:639px) {  
+
+
+
+}
+@media screen and (max-width:479px){
+	
+
+	
+		
+}
+
+
