@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>유튜브 동영상 배경</title>
+
+    <style type="text/css">
+
+    * { box-sizing: border-box; }
+
+    .video-background {
+
+        background: #000;
+
+        position: fixed;
+
+        top: 0; right: 0; bottom: 0; left: 0;
+
+        z-index: -99;
+
+    }
+
+    .video-foreground,
+
+    .video-background iframe {
+
+        position: absolute;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        pointer-events: none;
+
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+
+    .video-foreground { height: 300%; top: -100%; }
+
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+
+    .video-foreground { width: 300%; left: -100%; }
+
+    }
+
+    h1{ color:white;}
+
+    </style>
+
+    
+
+</head>
+
+<body>
+
+<div class="video-background">
+
+    <div class="video-foreground">
+<!-- https://www.youtube.com/embed/sbc2yBheAbo?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=sbc2yBheAbo,'다른경로 시 다음 비디오.' -->
+      <iframe src="https://www.youtube.com/embed/sbc2yBheAbo?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=sbc2yBheAbo" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+
+  </div>
+
+<h1>악동뮤지션</h1>
