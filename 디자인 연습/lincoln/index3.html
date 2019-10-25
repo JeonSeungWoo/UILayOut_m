@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>링컨코리아 홈페이지</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- 폰트어썸-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <style>
+        *{margin: 0;padding:0}
+        /* Make the image fully responsive */
+        
+        .carousel-inner img {
+          width: 100%;
+          height: 100%;
+        }
+        #demo{
+            box-sizing: border-box !important;
+            padding:none !important;
+            overflow: hidden;
+            margin:none !important;
+           
+        }     
+        .col-sm-6, .col-sm-3,.col-sm-4{           
+            box-sizing: border-box !important;
+            padding:0 !important;
+            overflow: hidden;
+
+        }
+       
+        #box-left{
+            box-sizing: border-box !important;
+            max-height: 450px !important;              
+        }
+        #box-right{
+            box-sizing: border-box !important;
+            max-height:300px !important;
+            overflow: hidden;
+        }
+        #box1,#box2{
+            padding-top:10px;
+        }
+        #box-bottom{
+            box-sizing: border-box !important;
+            max-height:150px !important;
+        }
+        #s-img-2{
+            display:none;
+        }
+        .caption{
+            width:100%;
+            text-align: center !important;
+            position:absolute;
+            bottom:5px;           
+            color:white;
+            font-size:1.5vw;
+        }
+        .row img{
+            transform:scale(1);
+            transition:0.5s;
+            height:100%;
+        }
+        .row img:hover{
+            transform:scale(1.05);            
+        }
+   
+        #modal2 .col-sm-3{
+            height:30px !important;
+        }
+
+        .btn-outline-secondary{
+            border-color: white;
+            color:white;
+        }
+
+        .modal-header img{
+            width:100%;
+        }
+        #myModal2 .modal-body div{
+            height:30px !important;
+        }
+        #myModal3 form{
+            color: #0a0a0a;
+            font-size: 12px;
+
+        }
+        footer{
+            text-align: center;
+            background:black;
+            color:#eeeeee;
+            padding:20px;
+        }
+
+        @media screen and (max-width:768px){
+            #box-bottom{
+                box-sizing: border-box !important;
+                max-height:400px !important;
+            }
+            #s-img-1{
+                display:none;
+            }
+            #s-img-2{
+                display:block;
+            }
+            #box-left{
+                max-height:400px !important;
+            }
+            #box-right{
+                max-height:800px !important;
+            }
+            #box-right .col-sm-6{
+                max-height:400px !important;
+            }
+            
+            #bottom-menu{
+                padding-left:20px;
+            }
+            #bottom-menu h5{
+                padding-top:30px;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+    // iframe resize
+    function autoResize(i)
+    {
+        (i).height=0;
+        var iframeHeight=
+        (i).contentWindow.document.body.scrollHeight;
+        (i).height=iframeHeight+20;
+    }
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top " >
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="로고"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
+                <a class="nav-link" href="#introduce">회사소개</a>
+            </li>
+            <li class="nav-item"data-toggle="collapse" data-target=".navbar-collapse">
+                <a class="nav-link" href="#vision">회사비전</a>
+            </li>
+            <li class="nav-item"data-toggle="collapse" data-target=".navbar-collapse">
+                <a class="nav-link" href="#curriculmn">커리큘럼</a>
+            </li>
+            <li class="nav-item"data-toggle="collapse" data-target=".navbar-collapse">
+                <a class="nav-link" href="#map">오시는길</a>
+            </li>    
+            </ul>
+        </div>  
+    </nav>
+    <div class="container">
+        <div class="row">
+            <!-- 캐러셀 ------------------------------------------------------------------>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                    <li data-target="#demo" data-slide-to="4"></li>
+                </ul>
+                
+                <!-- The slideshow -->
+                <div class="carousel-inner" style="margin: 0px; padding: 0px; border: 0px; margin: none; ">
+                    <div class="carousel-item active">
+                    <img src="img/pic01.png" alt="aviator">
+                    <!-- <div class="carousel-caption">
+                        <h3>Aviator</h3>
+                        <p>Aviator</p>
+                        </div> -->
+                    </div>
+                    <div class="carousel-item">
+                    <img src="img/pic02.png" alt="nautilus">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="img/pic03.png" alt="mkc">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="img/pic04.png" alt="continental">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="img/pic05.png" alt="mkz">
+                    </div>
+                </div>
+                
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                
+            </div>  
+            <!-- 캐러셀.끝.--> 
+
+        </div>
+        
+
+        <!--박스 -->
+        <div class="row" id="box1">
+            <div class="col-sm-6" id="box-left">
+                <img src="img/pic06.png" alt="전체모델이미지" width="100%">
+                <div class="caption">
+                    <h4>See All Lincoln</h4>
+                    <p>당신만을 위한 링컨의 모델을 확인해보세요</p>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">전체모델보기</a> 
+                </div> 
+            </div>
+            <div class="col-sm-6">
+                <div class="row" id="box-right">
+                    <div class="col-sm-6">
+                        <img src="img/pic07.png" alt="인텔리전트" width="100%">
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="img/pic08.png" alt="프리미엄서비스" width="100%">
+                    </div>
+                </div>
+                <div class="row" id="box-bottom">
+                    <div class="col-sm-12">
+                        <img id="s-img-1" src="img/pic09.png" alt="세일즈프로모션" width="100%">
+                        <img id="s-img-2" src="img/pic09_2.png" alt="세일즈프로모션" width="100%">
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>  
+        <!--박스끝-->
+
+        <!--박스2 -------------------------------------------------------->
+        <div class="row" id="box2">
+            <div class="col-sm-4">
+                <img src="img/pic10.png" alt="전시장/서비스센터" width="100%">
+                <div class="caption">
+                    <h4>전시장및 서비스센터 찾기</h4>                    
+                    <button id="gotoMap" type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#myModal">
+                            바로 가기
+                    </button>
+                    <!-- Modal ------------------------------------------------>
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">                                
+                                <div class="modal-header">
+                                    <h4 class="modal-title" style="color:gray;">전시장위치</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div> 
+                                <div class="modal-body">
+                                    
+                                <!-- 카카오맵 ----------------------------------------->
+                                <div id="kakaomap" style="width: 100%;height: 500px;"></div>
+                                <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=54e2bd4a192f913ff519330aaadac0f9"></script>
+                                <script>
+                                var map;
+                                
+                                $(document).ready(function () {
+                    
+                                    var mapContainer = document.getElementById('kakaomap'), // 지도를 표시할 div 
+                                    mapOption = { 
+                                            center: new daum.maps.LatLng(37.519402, 127.035188), // 지도의 중심좌표
+                                            level: 3 // 지도의 확대 레벨
+                                        };
+                    
+                                    map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+                                    
+                                    // 마커가 표시될 위치입니다 
+                                    var markerPosition  = new daum.maps.LatLng(37.519402, 127.035188); 
+                    
+                                    // 마커를 생성합니다
+                                    var marker = new daum.maps.Marker({
+                                        position: markerPosition
+                                    });
+                    
+                                    // 마커가 지도 위에 표시되도록 설정합니다
+                                    marker.setMap(map);
+                                   
+                                   $("#gotoMap").click(function(){
+                                    setTimeout(function(){ map.relayout(); }, 1);
+                                    
+                                   });
+                                    
+                                });
+                    
+                                </script>
+                                <!-- 카카오맵.끝.-->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>                    
+                            </div>
+                        </div>
+                    </div> 
+                    <!-- modal.끝.-->
+                </div> 
+            </div>
+            <div class="col-sm-4">
+                <img src="img/pic11.png" alt="브로셔 보기" width="100%">
+                <div class="caption">
+                    <h4>브로셔 보기</h4>                    
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#myModal2">
+                            바로 가기
+                    </button>
+                    <!-- Modal ------------------------------------------------>
+                    <div class="modal" id="myModal2">
+                            <div class="modal-dialog">
+                                <div class="modal-content">                                
+                                    <div class="modal-header">
+                                        <img src="img/modal01.jpg" alt="모달이미지">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div> 
+                                    <div class="modal-body">
+                                        <h3 style="color:gray;">브로셔 보기</h3>
+                                        <div style="padding:50px;">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <img src="img/car01.png" alt="자동차">
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <a href="https://www.lincoln-korea.com/content/dam/lincoln/sk/nameplate/brochure/19MY-Nautilus.pdf" target="_blank">
+                                                        <img src="img/car02.png" alt="자동차">
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <img src="img/car03.png" alt="자동차">
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <img src="img/car04.png" alt="자동차">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>                    
+                                </div>
+                            </div>
+                    </div> 
+                    <!-- modal.끝.-->
+
+
+                </div> 
+            </div>
+            <div class="col-sm-4">
+                <img src="img/pic12.png" alt="시승신청" width="100%">
+                <div class="caption">
+                    <h4>시승신청</h4>                    
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#myModal3">
+                            바로 가기 <i class="fas fa-chevron-right"></i>
+                    </button>
+                     <!-- Modal ------------------------------------------------>
+                    <div class="modal" id="myModal3">
+                            <div class="modal-dialog">
+                                <div class="modal-content">                                
+                                    <div class="modal-header">
+                                        <img src="img/modal02.jpg" alt="모달이미지">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div> 
+                                    <div class="modal-body">
+                                        <h3 style="color:gray;">시승신청</h3>
+                                        <div>
+                                            <div class="row" style="border:1px solid red;">
+                                                <form action="booking.jsp" method="post" class="form-inline">
+                                                <div class="col-sm-6" style="border:1px solid blue;">
+                                                   어떤 자동차에 관심이 있나요? ＊<br>
+                                                   <select name="car" class="form-control form-group" style="width:150px;">
+                                                       <option value="CONTINENTAL">링컨 CONTINENTAL</option>
+                                                       <option value="MKZ">링컨 MKZ</option>
+                                                       <option value="NAUTILUS">링컨 NAUTILUS</option>
+                                                       <option value="MKC">링컨 MKC</option>
+                                                   </select> 
+                                                   <br>
+                                                   이름<br>
+                                                   <input type="text" name="name" class="form-control form-group">
+                                                   <br>
+                                                   이메일<br>
+                                                   <input type="text" name="email" class="form-control form-group">    
+                                                </div>
+                                                <div class="col-sm-6" style="border:1px solid green;">
+                                                    신차를 언제 구입할 계획이십니까?<br>
+                                                    <select name="plan" class="form-control form-group" style="width:150px;">
+                                                       <option value="noselect">선택하세요</option>
+                                                       <option value="0-30일">0-30일</option>
+                                                       <option value="0-30일">0-30일</option>
+                                                       <option value="4-6개월">4-6개월</option>
+                                                       <option value="6개월이후">6개월이후</option>
+                                                       <option value="정해진계획없음">정해진계획없음</option>
+                                                   </select>
+                                                   <br>  
+                                                   추가요청사항<br>
+                                                   <input type="text" name="addition">  
+                                                   <br>
+                                                   전시장을 선택하세요<br>
+                                                   <select name="dealer" class="form-control form-group" style="width:150px;">
+                                                       <option value="noselect">선택하세요</option>
+                                                       <option value="강서전시장">강서전시장(선인자동차)</option>
+                                                       <option value="대치전시장">대치전시장(선인자동차)</option>
+                                                       <option value="동대문전시장">동대문전시장(선인자동차)</option>
+                                                       <option value="마포전시장">마포전시장(더파크모터스)</option>
+                                                       <option value="미아전시장">미아전시장(더파크모터스)</option>
+                                                   </select> 
+                                                </div>
+                                                <input type="submit" value="신청하기" class="btn" style="background:#bd7e0a;color:white;margin:auto;margin-top:10px;">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>                    
+                                </div>
+                            </div>
+                    </div> 
+                    <!-- modal.끝.-->
+
+                </div> 
+            </div>
+        </div>
+        <!--박스2.끝.-->
+
+        <!-- 게시판 ------------------------------------------>
+        <div class="container" id="board">
+        <h3 class="text-center" style="margin-top:50px;">문의사항</h3>
+        <iframe id="iframe1" src="http://pjszzang.dothome.co.kr/g5/bbs/board.php?bo_table=board01" width="100%" onload="autoResize(this)" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        </div>
+
+        <!-- 게시판.끝.-->
+
+        <!-- bottom 메뉴 -------------------------------------->
+        <div class="row" id="bottom-menu">
+            <div class="col-sm-3">
+                <h5>Vehicles</h5>
+                <div>CONTINENTAL</div>
+                <div>MKZ</div>
+                <div>AVIATOR</div>
+                <div>NAUTILUS</div>
+                <div>MKC</div>
+            </div>
+            <div class="col-sm-3">
+                <h5>Technology</h5>
+                <div>링컨 인텔리전트 AWD</div> 
+            </div>
+            <div class="col-sm-3">
+                <h5>Shopping</h5>
+                <div>시장 및 서비스센터 찾기</div>
+                <div>브로셔 다운로드</div>
+                <div>MyLincoln 매거진</div>
+                <div>세일즈 프로모션</div>
+                <div>링컨 파이낸셜 서비스</div>
+                <div>시승 신청</div> 
+            </div>
+            <div class="col-sm-3">
+                <h5>Owners</h5>
+                <div>공인 서비스</div>                
+                <div>블랙 레이블 멤버십 서비스</div>                
+                <div>픽업&딜리버리</div>                
+                <div>소모성 부품 무상교환</div>                
+                <div>24시간 긴급출동 서비스공인 서비스</div>                
+                <div>보증 및 서비스</div>                
+                <div>리콜 안내</div>
+            </div>
+        </div>
+
+        <!-- bottom 메뉴.끝.-->
+    </div>
+    
+    <footer>
+            <img src="img/facebook.png" alt="facebook" width="30"> 링컨 고객센터 : 1600-6003  긴급출동서비스 : 080-300-3673<br>
+            Copyright &copy; 2017 Ford Motor Company
+    </footer>
+
+    
+    
+</body>
+</html>

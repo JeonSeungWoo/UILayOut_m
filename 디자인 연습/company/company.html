@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TIS정보기술교육센터</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+        .navbar{background: dodgerblue !important;}
+        .jumbotron{background:dodgerblue;color:white;
+                border-radius: 0 !important;
+                padding-top:150px;
+                padding-bottom:150px;
+        }
+        .bg-grey {
+            background-color: #eeeeee;
+        }
+        .form-inline{width:300px;margin:auto;}
+        .container-fluid{
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .logo{font-size:200px;color:dodgerblue;}
+        .logo-small{font-size:50px;color:dodgerblue;}
+        @media screen and (max-width:768px){
+            .col-sm-4{
+                padding:50px 0;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+            scrollTop: $(hash).offset().top
+            }, 900, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+            } // End if
+        });
+        })
+    </script>
+</head>
+<body id="myPage">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">TIS.Edu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
+                <a class="nav-link" href="#introduce">회사소개</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
+                <a class="nav-link" href="#vision">회사비전</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
+                <a class="nav-link" href="#curriculumn">커리큘럼</a>
+            </li> 
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
+                <a class="nav-link" href="#map">오시는길</a>
+            </li>   
+            </ul>
+        </div>  
+    </nav>    
+    <div class="jumbotron text-center">
+        <h1>TIS정보기술교육센터</h1>
+        <p>정부지원 I전문교육기관</p>
+        <form class="form-inline" action="search.jsp">
+            <div class="input-group">
+                <input type="text" class="form-control" size="20" style="width:200px !important;" placeholder="검색어를 입력하세요">
+                <div class="input-group-btn">
+                    <button class="btn btn-danger">검색</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="introduce" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>교육센터소개</h2>
+                    <h4>TIS정보기술교육센터는 정부지원IT전문교육기관입니다.</h4>
+                    <button class="btn btn-primary btn-lg">more</button>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fas fa-signal logo"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="vision" class="container-fluid bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <i class="fas fa-globe logo"></i>
+                </div>
+                <div class="col-sm-8">
+                    <h2>교육센터비전</h2>
+                    <h4>현장에서 필요로하는 IT전문인력양성</h4>
+                </div>
+            </div>
+        </div>       
+    </div>  
+    
+    <div id="curriculumn" class="container-fluid text-center">
+        <h2>커리큘럼</h2>
+            <h4 style="padding-bottom:20px;">개설과목</h4>
+            
+            <div class="row">
+              <div class="col-sm-4">
+                <i class="fab fa-java logo-small"></i>
+                <h4>자바</h4>
+                <p>객체지향언어</p>
+              </div>
+              <div class="col-sm-4">
+                <i class="fas fa-database logo-small"></i>
+                <h4>ORACLE</h4>
+                <p>Enterprise RDB</p>
+              </div>
+              <div class="col-sm-4">
+                <i class="fas fa-power logo-small"></i>
+                <h4>HTML5</h4>
+                <p>웹표준 마크업언어</p>
+              </div>
+            </div>
+              
+            <div class="row">
+              <div class="col-sm-4">
+                <i class="fas fa-power logo-small"></i>
+                <h4>CSS3</h4>
+                <p>웹표준 스타일지정언어</p>
+              </div>
+              <div class="col-sm-4">
+                <i class="fas fa-power logo-small"></i>
+                <h4>javascript</h4>
+                <p>웹표준 프론트엔드개발언어</p>
+              </div>
+              <div class="col-sm-4">
+                <i class="fas fa-power logo-small"></i>
+                <h4>JSP</h4>
+                <p>Java Server Page</p>
+              </div>            
+            </div>
+    </div>
+
+    <div id="map" class="container-fluid text-center bg-grey">
+        <h2 style="padding-bottom:20px;">오시는 길</h2>
+        <div class="container">
+            <div id="kakaomap" style="width: 100%;height: 500px;"></div>
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54e2bd4a192f913ff519330aaadac0f9"></script>
+            <script>
+            $(document).ready(function () {
+
+                var mapContainer = document.getElementById('kakaomap'), // 지도를 표시할 div 
+                mapOption = { 
+                        center: new daum.maps.LatLng(37.534625, 126.898577), // 지도의 중심좌표
+                        level: 3 // 지도의 확대 레벨
+                    };
+
+                var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+                // 마커가 표시될 위치입니다 
+                var markerPosition  = new daum.maps.LatLng(37.534625, 126.898577); 
+
+                // 마커를 생성합니다
+                var marker = new daum.maps.Marker({
+                    position: markerPosition
+                });
+
+                // 마커가 지도 위에 표시되도록 설정합니다
+                marker.setMap(map);
+            });
+
+            </script>
+            <!-- 카카오맵.끝.-->
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+            To Top
+        </a>
+        <p>&copy;TIS.EDU. All rights reserved.</p>
+    </footer>
+   
+
+</body>
+</html>
