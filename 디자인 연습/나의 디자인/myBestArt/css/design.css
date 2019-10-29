@@ -1,0 +1,20 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; 
+}
+
+.boxClass{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+  
+}
+
+.cursor{
+    position: absolute;
+    top:0;
+    left:0;
+}
+
