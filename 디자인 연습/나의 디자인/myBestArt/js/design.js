@@ -1,84 +1,156 @@
-/* 나의 신들린 디자인 */
 
-/* 아 jqrey 안쓸려고 했는데 */
-$(document).mousemove(function(e){
+// /* 나의 신들린 디자인 */
 
-    $('.cursor').css("top", e.pageY);
-    $('.cursor').css("left", e.pageX);
+var HFBauto;
+/* header footer backgraund 생성 및 css 메소드 */
+function makeDivHF(n){
+ //기존 값 Interval제거
+     clearInterval(HFBauto);
+     $("#headerDivId").remove();
+     $("#footDivId").remove();
+  /* header---------------------------------------------------------------------------------- */
+    // 첫번째 틀.
+    var headerDiv = document.createElement('div');
+    headerDiv.id = 'headerDivId';
+    headerDiv.className = 'headerDivClass';
+    document.getElementsByTagName('body')[0].appendChild(headerDiv);
+
+    for (var i = 1; i <= n; i++) {
+      var iDiv = document.createElement('div');
+      iDiv.id = 'headerBox' + i;
+      iDiv.className = 'headerBoxClass';
+      document.getElementById('headerDivId').appendChild(iDiv);
+      //안에 img 생성.
+      var headerImg = document.createElement('img');
+      headerImg.id = 'headerImgId' + i;
+      headerImg.className = 'headerImgClass';
+      headerImg.src = 'img/arr/black_bg.png';
+      document.getElementById('headerBox' + i).appendChild(headerImg);
+    }
+    /* header----- */
+    ;
+    /* footer---------------------------------------------------------------------------------- */
+    // 첫번째 틀.
+    var footDiv = document.createElement('div');
+    footDiv.id = 'footDivId';
+    footDiv.className = 'footDivId';
+    document.getElementsByTagName('body')[0].appendChild(footDiv);
+
+
+    for (var i = 1; i <= n; i++) {
+      var iDiv = document.createElement('div');
+      iDiv.id = 'footBox' + i;
+      iDiv.className = 'footBoxClass';
+      document.getElementById('footDivId').appendChild(iDiv);
+      //안에 img 생성.
+      var footImg = document.createElement('img');
+      footImg.id = 'footImgId' + i;
+      footImg.className = 'footImgClass';
+      footImg.src = 'img/arr/black_bg.png';
+      document.getElementById('footBox' + i).appendChild(footImg);
+    }
+
+    /* footer----- */
+
+
+
+    /* 자동화 설정. 및 arr */
+    var backColorArr = ['#283B42', '#1D6A96', '#85B8CB','#D1DDDB'];
+    var colorArr = ['#D1DDDB', '#85B8CB', '#1D6A96','#283B42'];
+
+    /* 초기 값은 1  마직막 값은 n */ /* 1+imgHFBNum   n-imgHFBNum  */
+    var imgHFBNum = 0;
+    var startNum = 1;
+
+    HFBauto = setInterval(function () {
+      $("#body").css("background", backColorArr[imgHFBNum]).css("color", colorArr[imgHFBNum]);
+      //imgHFBNum 가 0부터 i 까지 비교하기 위해생성.
+      for (var i = 0; i < (n-2); i++) {
+        
+        if(imgHFBNum == i){
+          /* 각 아이디를 n이 5일경우.  1과5  2와4 순으로 이미지를 보여주기 위해서 사용. */
+          for(var j = 1; j <= n; j++){
+            if(j == startNum+imgHFBNum || j == n-imgHFBNum){
+              $("#headerImgId"+j).attr("src", "img/arr/main.gif");
+              $("#footImgId"+j).attr("src", "img/arr/main.gif");
+              
+            }else{
+              $("#headerImgId"+j).attr("src", "img/arr/black_bg.png");
+              $("#footImgId"+j).attr("src", "img/arr/black_bg.png");
+            }
+           } 
+
+        }
+
+      }
+      imgHFBNum++;
+      if (imgHFBNum == (n-2)) {
+        imgHFBNum = 0;
+      }
+    }, 3000);
+
+};
+
+  
+
+/* 브라우저 크기를 실시간으로 감시. */
+
+function browserSize() {
+   
+  //witdth값을 가져온다.
+  var windowWidth = $(window).width();
+
+  if (windowWidth < 1200) {
+    //창 가로 크기가 미만일 경우
+    makeDivHF(5);
+    $(".headerImgClass").css("width","20%");
+    $(".footImgClass").css("width","20%");
+  } else {
+    //창 가로 크기가 이상 경우
+    makeDivHF(7);
+    $(".headerImgClass").css("width","14.281%");
+    $(".footImgClass").css("width","14.281%");
+
+  }
+}
+browserSize();
+//창크기 변화 감지
+$(window).resize(function () {
+  browserSize();
 });
 
+/* 커서 */
+$(document).mousemove(function (e) {
+  $('.cursor').css("top", e.pageY);
+  $('.cursor').css("left", e.pageX);
+});
+
+/* left right */
+
+var leftDiv = document.createElement('div');
+leftDiv.id = 'leftDivId';
+leftDiv.className = 'leftDivClass';
+document.getElementsByTagName('body')[0].appendChild(leftDiv);
+
+var leftImg = document.createElement('img');
+leftImg.id = 'leftImgId';
+leftImg.className = 'leftImgClass';
+leftImg.src = 'img/arr/black_bg.png';
+document.getElementById('leftDivId').appendChild(leftImg);
+
+$("#leftImgId").attr("src", "img/left.jpg");
+
+var rightDiv = document.createElement('div');
+rightDiv.id = 'rigthDivId';
+rightDiv.className = 'rightDivClass';
+document.getElementsByTagName('body')[0].appendChild(rightDiv);
+
+var rightImg = document.createElement('img');
+rightImg.id = 'rightImgId';
+rightImg.className = 'rightImgClass';
+rightImg.src = 'img/right.jpg';
+document.getElementById('rigthDivId').appendChild(rightImg);
 
 
-//div 6개 Box 생성 id box1 :  class box;
-/* 순수 자바스크립트. */
-var mainDiv = document.createElement('div');
-    mainDiv.id = 'mainDivId';
-    mainDiv.className = 'mainDivClass';
-    document.getElementsByTagName('body')[0].appendChild(mainDiv);
 
 
-for(var i = 1; i<=6; i++){
-    var iDiv = document.createElement('div');
-    iDiv.id = 'box' + i;
-    iDiv.className = 'boxClass';
-    document.getElementsByTagName('body')[0].appendChild(iDiv);
-    document.getElementById('mainDivId').appendChild
-    }
-    
-    //box 정보 가져오기
-    //header
-    var box1 = document.getElementById("box1");
-    //left
-    var box2 = document.getElementById("box2");
-    var box3 = document.getElementById("box3");
-    //rigth
-    var box4 = document.getElementById("box4");
-    var box5 = document.getElementById("box5");
-    //bottom
-    var box6 = document.getElementById("box6");
-    
-    var box1Arr = ['img/arr/top01.jpg','img/arr/top02.jpg','img/arr/top03.jpg','img/arr/top04.jpg'];
-    var box2Arr = ['img/arr/left01.jpg','img/arr/left02.jpg','img/arr/left03.jpg','img/arr/left04.jpg'];
-    var box3Arr = ['img/arr/leftB01.jpg','img/arr/leftB02.jpg','img/arr/leftB03.jpg','img/arr/leftB04.jpg'];
-    var box4Arr = ['img/arr/topR1.jpg','img/arr/topR2.jpg','img/arr/topR3.jpg','img/arr/topR4.jpg'];
-    var box5Arr = ['img/arr/right01.jpg','img/arr/right02.jpg','img/arr/right03.jpg','img/arr/right04.jpg'];
-    var box6Arr = ['img/arr/bottom01.jpg','img/arr/bottom02.jpg','img/arr/bottom03.jpg','img/arr/bottom04.jpg'];
-
-    var box1Num = 0;
-    var boxAuto = setInterval(function(){
-        box1Num++;
-        console.log("box1Num : " + box1Num);
-        box1.style.backgroundImage = "url('"+box1Arr[box1Num]+"')";
-        box2.style.backgroundImage = "url('"+box2Arr[box1Num]+"')";
-        box3.style.backgroundImage = "url('"+box3Arr[box1Num]+"')";
-        box4.style.backgroundImage = "url('"+box4Arr[box1Num]+"')";
-        box5.style.backgroundImage = "url('"+box5Arr[box1Num]+"')";
-        box6.style.backgroundImage = "url('"+box6Arr[box1Num]+"')";
-      if(box1Num == 3){
-        box1Num = 0;
-      }
-    },3000);
-
-
-    //div css 조절.
-    box1.style.left = '40%';
-    box1.style.width = "50%";
-    box1.style.zIndex = -1;
-
-    box2.style.left = '50px';
-    box2.style.top = '100px';
-
-
-    box3.style.left = '50px';
-    box3.style.bottom = '100px';
-
-    box4.style.right = '50px';
-    box4.style.top = '100px';
-
-    box5.style.right = '50px';
-    box5.style.bottom = '100px';
-
-    box6.style.left = '40%';
-    box6.style.width = "50%";
-    box6.style.zIndex = -1;
-    box6.style.bottom = '0';

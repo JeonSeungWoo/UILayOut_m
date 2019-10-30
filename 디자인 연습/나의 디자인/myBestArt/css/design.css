@@ -1,20 +1,96 @@
 *{
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box; 
+    cursor: none;
 }
 
-.boxClass{
-    position: fixed;
-    width: 200px;
-    height: 200px;
-    background-repeat: no-repeat;
-  
+
+#body{
+    width:100%;
+    height: 100%;
+    background-size:100%;
+    position:relative;
 }
+#main{
+    top: 120px;
+    position:relative;
+    left: 150px;
+}
+
 
 .cursor{
     position: absolute;
     top:0;
     left:0;
 }
+#headerDivId{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.headerBoxClass{
+    background: black;
+}
 
+.headerImgClass{
+    float: left; 
+    height: 120px;
+    
+}
+
+
+#footDivId{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+}
+.footBoxClass{
+    background: black;
+}
+
+.footImgClass{
+    float: left;
+    height: 120px;
+    z-index: 3;
+}
+
+
+#leftDivId{
+    width: 150px;
+    height: 73%;
+    position: fixed;
+    top: 120px;
+    z-index: 2;
+   
+}
+
+#leftImgId{
+    width: 150px;
+    height: 10%;
+    -webkit-animation: myImgHigth 12s infinite; /* Chrome, Safari, Opera */
+    animation: myImgHigth 12s infinite;
+    
+}
+  #rigthDivId{
+    width: 150px;
+    height: 73%;
+    position: fixed;
+    right: 0;
+    top: 120px;
+    z-index: 2;
+  }
+
+  #rightImgId{
+    width: 150px;
+    height: 10%;
+    -webkit-animation: myImgHigth 12s infinite; /* Chrome, Safari, Opera */
+    animation: myImgHigth 12s infinite;
+    z-index: 2;
+  }
+  
+  @keyframes myImgHigth {
+    from {height: 10%;}
+    to {height:100%;}
+  }
