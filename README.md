@@ -22,6 +22,9 @@ Html, css에 대한 코드 및 유용한 사이트 정리.
 ### https://bennettfeely.com/clippy/
 
 
+## js 이벤트
+### https://daneden.github.io/animate.css/
+
 ## 웹 디자인
 
 ### https://www.w3schools.com/
